@@ -8,15 +8,12 @@
             <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Sheets</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="datasheet.php?type=dedicatedTransports">Dedicated Transports</a>
-                    <a class="dropdown-item" href="datasheet.php?type=elites">Elites</a>
-                    <a class="dropdown-item" href="datasheet.php?type=fastAttack">Fast Attack</a>
-                    <a class="dropdown-item" href="datasheet.php?type=flyers">Flyers</a>
-                    <a class="dropdown-item" href="datasheet.php?type=fortifications">Fortifications</a>
-                    <a class="dropdown-item" href="datasheet.php?type=heavySupport">Heavy Support</a>
-                    <a class="dropdown-item" href="datasheet.php?type=hq">HQ</a>
-                    <a class="dropdown-item" href="datasheet.php?type=lordsOfWar">Lords Of War</a>
-                    <a class="dropdown-item" href="datasheet.php?type=troops">Troops</a>
+                    <?php
+                    $navData = json_decode(GetAllDataSheetTypes());
+                    for ($i = 0; $i < sizeof($navData); $i++) {
+                        echo "<a class=\"dropdown-item\" href=\"" . $navData[$i]->hyperlink . "\">" . $navData[$i]->name . "</a>";
+                    }
+                    ?>
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="https://dockms.net/controller/logout.php"><span class="mdi mdi-logout"></span> Logout</a></li>

@@ -1,18 +1,22 @@
 <!doctype html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
+<style>
+
+</style>
 
 <body>
     <?php include 'includes/navigation.php'; ?>
     <div class="container">
-        <?php
-        if (isset($_GET['type'])) {
-            echo $_GET['type'] . " are displaying.<br>";
-            echo preg_replace('/(?<!\ )[A-Z]/', ' $0', ucwords($_GET['type']));
-        }
-        ?>
+        <div class="wrapper">
+            <?php
+            if (!isset($_GET['type'])) {
+                PrintCards(json_decode(GetAllDataSheetTypes()));
+            }
+            ?>
+        </div>
+        <?php include 'includes/footer.php'; ?>
     </div>
-    <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

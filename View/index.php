@@ -1,34 +1,20 @@
 <!doctype html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
+<style>
+
+</style>
 
 <body>
     <?php include 'includes/navigation.php'; ?>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 my-1">
-                <div class="card" style="background-image:url('orkTroopsCard.jpg');">
-                    <img class="card-img d-none" src="orkTroopsCard.jpg">
-                </div>
-            </div>
-            <div class="col-md-4 my-1">
-                <div class="card" style="background-image:url('orkTroopsCard.jpg');">
-                    <img class="card-img d-none" src="orkTroopsCard.jpg">
-                </div>
-            </div>
-            <div class="col-md-4 my-1">
-                <div class="card" style="background-image:url('orkTroopsCard.jpg');">
-                    <img class="card-img d-none" src="orkTroopsCard.jpg">
-                </div>
-            </div>
-            <div class="col-md-4 my-1">
-                <div class="card" style="background-image:url('orkTroopsCard.jpg');">
-                    <img class="card-img d-none" src="orkTroopsCard.jpg">
-                </div>
-            </div>
+        <div class="wrapper">
+            <?php
+            PrintCards(json_decode(GetAllSections()));
+            ?>
         </div>
+        <?php include 'includes/footer.php'; ?>
     </div>
-    <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

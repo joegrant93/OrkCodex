@@ -1,0 +1,90 @@
+:root {
+    --main-1: #99E2B4;
+    --main-2: #88D4AB;
+    --main-3: #78C6A3;
+    --main-4: #67B99A;
+    --main-5: #56AB91;
+    --main-6: #469D89;
+    --main-7: #358F80;
+    --main-8: #248277;
+    --main-9: #14746F;
+    --main-10: #036666;
+    --main-bg: #003030;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.col-md-4 {
+    background-color: var(--main-10);
+    color: var(--main-1);
+    transition: all .2s ease-in-out;
+    border: 1px solid var(--main-8);
+    min-height: 33%;
+}
+
+.col-md-4:hover {
+    cursor: pointer;
+    background-color: var(--main-1);
+    color: var(--main-10);
+}
+
+.col-md-4 h5 {
+    padding: 10% 0;
+    font-size: 2rem;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+/*xl*/
+@media (max-width: 1200px) {
+    .col-md-4 h5 {
+        padding: 10% 0;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*lg*/
+@media (max-width: 992px) {
+    .col-md-4 h5 {
+        padding: 8% 0;
+        font-size: 1.5rem;
+    }
+}
+
+/*md*/
+@media (max-width: 768px) {
+    .col-md-4 h5 {
+        padding: 6% 0;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*sm*/
+@media (max-width: 576px) {
+    .col-md-4 h5 {
+        padding: 6%;
+        font-size: 1rem;
+    }
+}

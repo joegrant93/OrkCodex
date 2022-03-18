@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-    <a class="navbar-brand" href="#">Ork Codex</a>
+    <a class="navbar-brand" href="index.php">Ork Codex</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +16,6 @@
                     ?>
                 </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="https://dockms.net/controller/logout.php"><span class="mdi mdi-logout"></span> Logout</a></li>
         </ul>
     </div>
 </nav>

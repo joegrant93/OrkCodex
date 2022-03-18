@@ -8,13 +8,13 @@
 <body>
     <?php include 'includes/navigation.php'; ?>
     <div class="container">
-        <div class="wrapper">
             <?php
             if (!isset($_GET['type'])) {
                 PrintCards(json_decode(GetAllDataSheetTypes()));
+            }else if(1){
+
             }
             ?>
-        </div>
         <?php include 'includes/footer.php'; ?>
     </div>
 </body>
